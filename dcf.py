@@ -23,7 +23,7 @@ pv_terminal_value = terminal_value / (1 + wacc) ** years
 # --- Valuation ---
 enterprise_value = pv_fcf.sum() + pv_terminal_value
 equity_value     = enterprise_value - net_debt
-price_per_share  = equity_value / shares
+price_per_share  = equity_value / shares * 1
 
 print(pd.DataFrame({
     "Year": year, "FCF": fcf.round(2),
